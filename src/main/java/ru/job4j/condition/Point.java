@@ -13,7 +13,7 @@ public class Point {
 
     public static void main(String[] args) {
         double d1 = Point.distance(2, 4, 6, 8);
-        double d2 = distance(3, 5, 11, 17);
+        double d2 = distance(3, 5, 14, 17);
         System.out.println(d1);
         System.out.println(d2);
     }
