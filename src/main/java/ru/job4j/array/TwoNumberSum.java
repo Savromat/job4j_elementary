@@ -5,17 +5,15 @@ public class TwoNumberSum {
     public static int[] getIndexes(int[] array, int target) {
         int i = 0;
         int j = array.length - 1;
-        int[] array2 = {};
-        while (i < array.length) {
+        while (i < array.length && i != j) {
             if (array[i] + array[j] == target) {
-                array2 = new int[] {i, j};
-                break;
+                return new int[] {i, j};
             } else if (array[i] + array[j] > target) {
                 j--;
-            } else if (array[i] + array[j] < target) {
+            } else {
                 i++;
             }
         }
-        return array2;
+        return new int[0];
     }
 }
