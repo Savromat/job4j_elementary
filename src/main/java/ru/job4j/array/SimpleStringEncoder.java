@@ -10,23 +10,13 @@ public class SimpleStringEncoder {
             if (symbol == input.charAt(i)) {
                 counter++;
             } else {
-                if (counter <= 1) {
-                    result += "" + symbol;
-                } else {
-                    result += "" + symbol + counter;
-                }
+                result = counter <= 1 ? result + "" + symbol : result + symbol + counter;
                 symbol = input.charAt(i);
                 counter = 1;
             }
 
         }
-
-        if (counter <= 1) {
-            result += "" + symbol;
-        } else {
-            result += "" + symbol + counter;
-        }
-
+        result = counter <= 1 ? result + "" + symbol : result + symbol + counter;
         return result;
     }
 
@@ -37,6 +27,5 @@ public class SimpleStringEncoder {
         System.out.println(encode(first));
         System.out.println(encode(second));
         System.out.println(encode(third));
-
     }
 }

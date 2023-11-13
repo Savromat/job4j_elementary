@@ -6,6 +6,15 @@ import static org.assertj.core.api.Assertions.*;
 public class SqAreaTest {
 
     @Test
+    void whenP4K1Square1() {
+        double expected = 1;
+        double p = 4;
+        double k = 1;
+        double out = SqArea.square(p, k);
+        assertThat(out).isCloseTo(expected, offset(0.01));
+    }
+
+    @Test
     void whenP6K2Square2() {
         double expected = 2;
         double p = 6;
