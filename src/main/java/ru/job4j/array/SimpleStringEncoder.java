@@ -23,7 +23,7 @@ public class SimpleStringEncoder {
     public static void main(String[] args) {
         String first = "aaaabbbccd";
         String second = "abc";
-        String third = "aaa";
+        String third = "aa";
         System.out.println(encode(first));
         System.out.println(encode(second));
         System.out.println(encode(third));
