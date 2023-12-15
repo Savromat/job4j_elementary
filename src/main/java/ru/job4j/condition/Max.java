@@ -7,11 +7,11 @@ public class Max {
     }
 
     public static int max(int left, int right, int high) {
-        return high > max(left, right) ? high : max(left, right);
+        return max(max(left, right), high);
     }
 
     public static int max(int left, int right, int high, int bottom) {
-        return max(high, bottom) > max(left, right) ? max(high, bottom) : max(left, right);
+        return max(max(left, right), max(high, bottom));
     }
 
     public static void main(String[] args) {
